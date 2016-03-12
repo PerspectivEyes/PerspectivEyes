@@ -1,0 +1,90 @@
+//- about.jade
+// About Us Mixin
+mixin about_us(name, nickname, profession, image)
+  .three.columns
+    .simple-modal(data-modal= nickname)
+      img.image-circle(style='width: 25%; height: 25%;', src='img/'+image)
+      h5!= name
+      h6!= profession
+      br
+    
+    div
+      button.modal-btn(data-modal-trigger= nickname)
+        span
+          img.image-circle.headshot(src='img/'+image, data-modal= nickname)
+      h6!= name
+        br
+        span(style='font-size:14px;font-weight: 400;')!= profession
+
+extends ./layouts/layout.jade
+
+block variables
+  - var pagetitle= 'About Us'
+  - var banner_image= 'img/banner/about.jpg'
+
+block content
+  #main-content.text-center.container
+    h3 About Us   
+    .row.text-center.main-text
+      +about_us('Dr. Benjamin Arthur', 'ben', 'Optometrist', 'about-ben.png')
+      +about_us('Daniel Vasquez', 'daniel', 'Optician', 'about-daniel.png')
+      +about_us('Mireya Piedra', 'mireya', 'Optometric Technician<br/>Frame Stylist', 'about-mireya.png')
+      +about_us('Pauline Archer-Grant', 'partricia', 'Front Desk Manager<br/>Insurance Coordinator', 'about-pauline.png')
+           
+    button.book-btn Book Appointment
+           
+    h3 Contact Us
+
+    .row
+      #contact.six.columns
+        input.field-width(placeholder='Name')      
+        br
+        input.field-width(placeholder='Email')     
+        br
+        textarea.field-width(placeholder='Message')
+        br
+
+        button.book-btn Contact Us
+
+      .six.columns
+        img(style='width: 90%;', src='img/map.png')                
+        br
+        | 629 Eastern Pkwy               
+        br
+        | Unit M4, Ste 202, Brooklyn, NYC 11213               
+        br
+        br               
+
+        span(style='font-weight:bold; color: #003F4E;') Phone            
+        br
+        | (718) 708 - 5360
+        br
+        br
+
+        span.days.text-left(style='font-weight: bold; color: #003F4E;')
+          span(style='color: #003F4E;') Hours            
+            br
+            | Monday: 
+            .time 10:00 AM - 6:00 PM         
+            br
+            | Tuesday:
+            .time 10:00 AM - 6:00 PM          
+            br
+            | Wednesday:
+            .time 10:00 AM - 6:00 PM                
+            br
+            | Thursday:
+            .time 10:00 AM - 7:00 PM 
+            br
+            | Friday:
+            .time 10:00 AM - 6:00 PM
+            br
+            | Saturday:
+            .time 10:00 AM - 6:00 PM
+            br
+            | Sunday:
+            .time Closed
+
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+    <script src="js/modal.js"></script>

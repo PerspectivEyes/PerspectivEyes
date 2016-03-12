@@ -1,0 +1,30 @@
+//- services.jade
+extends ./layouts/layout.jade
+block variables
+  - var pagetitle = 'Services'
+  - var banner_image = 'img/banner/services.jpg'
+
+block content
+    #main-content.text-center.container
+      h3(style='colo: #003F4E;') Services
+  
+      .row.text-center.main-text
+        .four.columns
+          img.services-logo.image-circle(src='img/services-pic.jpg')
+          h4(style='color: #003F4E;') Service 1
+          h6
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis scelerisque aliquet. Pellentesque id magna ac risus dignissim vulputate. Aenean quis elit leo. Cras ornare ante sed neque mollis, ut volutpat velit hendrerit. Pellentesque
+ 
+        .four.columns
+          img.services-logo.image-circle(src='img/services-pic.jpg')
+          h4(style='color: #003F4E;') Service 2
+          h6
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis scelerisque aliquet. Pellentesque id magna ac risus dignissim vulputate. Aenean quis elit leo. Cras ornare ante sed neque mollis, ut volutpat velit hendrerit. Pellentesque
+  
+        .four.columns
+          img.services-logo.image-circle(src='img/services-pic.jpg')
+          h4(style='color: #003F4E;') Service 3
+          h6
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis scelerisque aliquet. Pellentesque id magna ac risus dignissim vulputate. Aenean quis elit leo. Cras ornare ante sed neque mollis, ut volutpat velit hendrerit. Pellentesque
+
+      button.book-btn Book Appointment

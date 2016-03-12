@@ -1,0 +1,23 @@
+
+//- NAV.jade
+// nav Mixin
+mixin nav_items(page, href)
+  li
+    a(href= href)= page
+
+nav.sticky.nav.main
+  img.slicknav_brand(src='img/PERSPECTIVE_LOGO_7_white.png')
+ 
+  .items.row
+    ul#menu
+      // Nav Bar Items
+      +nav_items("HOME", "/")
+      +nav_items("ABOUT US", "about.html")
+      +nav_items("APPOINTMENTS", "appointment.html")
+      +nav_items("SERVICES", "services.html")
+      +nav_items("INSURANCE", "insurance.html")
+      +nav_items("REVIEWS", "reviews.html")
+
+// NAV BUFFER
+// Pushes Content Below NAV
+#nav_top_buffer

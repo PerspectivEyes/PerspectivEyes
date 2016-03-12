@@ -3,7 +3,7 @@
   "description": "Perspective Family Eyecare website",
   "dependencies": {
     "autoprefixer-stylus": "0.8.x",
-    "axis": "0.5.x",
+    "axis": "^0.5.2",
     "coffee-script": "^1.0.0",
     "css-pipeline": "0.3.x",
     "jade": "^1.0.0",

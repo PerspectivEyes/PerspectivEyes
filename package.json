@@ -6,13 +6,15 @@
     "axis": "^0.5.2",
     "coffee-script": "^1.0.0",
     "css-pipeline": "0.3.x",
+    "install": "^0.6.0",
     "jade": "^1.0.0",
+    "jeet": "^6.1.2",
     "js-pipeline": "0.2.x",
     "jstransformer-marked": "^1.0.0",
     "marked": "0.3.x",
     "roots": "^4.0.1",
     "roots-netlify": "^0.1.0",
-    "rupture": "0.6.x",
+    "rupture": "^0.6.1",
     "stylus": "0.52.x"
   }
 }

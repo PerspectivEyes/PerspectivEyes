@@ -1,12 +1,13 @@
 axis         = require 'axis'
 rupture      = require 'rupture'
 autoprefixer = require 'autoprefixer-stylus'
+jeet         = require 'jeet'
 js_pipeline  = require 'js-pipeline'
 css_pipeline = require 'css-pipeline'
 netlify      = require 'roots-netlify'
 
 module.exports =
-  ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'ship.*conf']
+  ignores: ['readme.md', '**/*layout.*', '**/_*', '.gitignore']
 
   extensions: [
     js_pipeline(files: 'assets/js/*.coffee'),
@@ -30,7 +31,7 @@ module.exports =
   ]
 
   stylus:
-    use: [axis(), rupture(), autoprefixer()]
+    use: [axis(), rupture(), jeet(), autoprefixer()]
     sourcemap: true
 
   'coffee-script':

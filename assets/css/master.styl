@@ -1,7 +1,100 @@
-@import '_settings'
-
 normalize-css()
 base()
 
-body
-  padding: 50px
+@import '_settings'
+@import 'jeet'
+
+/* NAV */
+#nav_top_buffer
+  height 100px
+  
+nav
+	 
+  ul
+    list-style-type none
+    text-align right
+    margin-right 0px
+   
+    li
+      display inline-block
+      font-size 14px
+      color #00404E
+      font-weight 500
+      text-transform uppercase
+      padding 0px 0px 0px 20px
+      text-align right
+      
+      a
+        text-decoration none
+        color inherit
+        
+        &:hover
+          border-top 2.5px dotted #00A3B2
+          border-bottom 2.5px dotted #00A3B2
+        
+  &.sticky
+    position fixed
+    width 70%
+    z-index 999
+
+  &.main 
+    height 60px
+    background-color #FFFFFF
+    border 10px
+    padding 20px 15%
+    display table
+    margin-bottom 1px
+  
+  .slicknav_brand
+    float left
+    color transparent
+    font-size 18px
+    line-height 30px
+    padding 7px 12px
+    height 44px
+    
+&.slicknav_item
+  display table-cell
+  vertical-align middle
+  float right
+  
+  &.slicknav_row
+    padding 5px 0px 5px 10px
+    margin 2px 5px
+
+.slicknav_menu
+  display none
+  font-size 16px
+  background #ffffff
+  padding 5px  
+    
+.slicknav_btn
+  margin 5px 5px 6px
+  text-decoration none
+  text-shadow 0 1px 1px rgba(255,255,255,.75)
+  border-radius 4px
+  background-color #222
+  position relative
+  display block
+  vertical-align middle
+  float right
+  padding .438em .625em
+  line-height 1.125em
+  -webkit-border-radius 4px
+  -moz-border-radius 4px
+
++below(1110px)
+  #menu
+    display none
+    
+  .slicknav_menu
+    display block
+    background none
+    height 60px
+    background-color #FFFFFF
+    border 10px
+    padding 20px 15%
+    display table
+    margin-bottom 1px
+
+        

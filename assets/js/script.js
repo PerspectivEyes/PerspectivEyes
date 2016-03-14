@@ -3,7 +3,7 @@ function scroll_style() {
    var div_top = $('.anchor-point').offset().top;
 
    if (window_top > div_top){
-      $('.main').css("background-color", "white");
+      $('.main').css("background-color", "#white");
    }
    if (window_top < div_top){
       $('.main').css("background-color", "#white");

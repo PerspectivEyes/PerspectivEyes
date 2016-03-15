@@ -23,7 +23,7 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1')
 
     // Font
-    include ../includes/fonts.jade
+    include ../includes/_fonts.jade
 
     // CSS
     link(rel='stylesheet', href='css/master.css')
@@ -48,12 +48,12 @@ html(lang='en')
 
   body
 
-    include ../includes/nav.jade
-    include ../includes/banner.jade
+    include ../includes/_nav.jade
+    include ../includes/_banner.jade
 
     block content
-    include ../includes/footer.jade
+    
+    include ../includes/_footer.jade
 
-    //JS Body
-    script(src='js/modal.min.js')
+
     

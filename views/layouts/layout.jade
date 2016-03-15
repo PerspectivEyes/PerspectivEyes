@@ -33,12 +33,11 @@ html(lang='en')
     // Favicon
     link(rel='icon', type='image/png', href='img/favicon.png')
 
-    // JS
-    block scripts
-      script(src='http://code.jquery.com/jquery-latest.min.js')   
+    // JS Head
+    block scripts-head  
+      script(src='http://code.jquery.com/jquery-latest.min.js') 
       script(src='js/script.js', charset='utf-8', type='text/javascript')
       script(src='js/jquery.slicknav.js')
-      script(src='js/modal.min.js')
       script.
         $(function(){
             $('#menu').slicknav({
@@ -46,10 +45,15 @@ html(lang='en')
                 prependTo:'.slicknav_item'
             });
         });
+
   body
+
     include ../includes/nav.jade
     include ../includes/banner.jade
 
     block content
     include ../includes/footer.jade
+
+    //JS Body
+    script(src='js/modal.min.js')
     

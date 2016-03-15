@@ -53,7 +53,7 @@ nav
     padding 7px 12px
     height 44px
     
-&.slicknav_item
+.slicknav_item
   display table-cell
   vertical-align middle
   
@@ -65,22 +65,26 @@ nav
   display none
   font-size 16px
   background #ffffff
-  padding 5px  
     
 .slicknav_btn
-  margin 5px 5px 6px
+  margin 5px 5px 0px
   text-decoration none
   text-shadow 0 1px 1px rgba(255,255,255,.75)
   border-radius 4px
-  background-color #222
-  position relative
-  display block
-  vertical-align middle
-  float right
-  padding .438em .625em
-  line-height 1.125em
+  background-color #003F4E
   -webkit-border-radius 4px
   -moz-border-radius 4px
+  
+  &:hover
+    background-color #00A3B4
+  
+.slicknav_nav 
+  a
+    &:hover
+      color #00A3B4
+      background #FFFFFF
+      border-top 0px
+      border-bottom 0px
 
 +below(1125px)
   #menu
@@ -88,10 +92,8 @@ nav
     
   .slicknav_menu
     display block
-    background-color #FFFFFF
+    background #ffffff
     border 10px
-    padding 20px 15%
+    padding px 15%
     margin-bottom 1px
     margin-right 1px
-
-        

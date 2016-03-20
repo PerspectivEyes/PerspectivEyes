@@ -1,4 +1,12 @@
 //- services.jade
+// Services Mixin
+mixin services(service, description, image)
+    .service
+      img.image-circle(src='img/'+image)
+      h5!= service
+      h6!= description
+      br
+
 extends ./_layouts/layout.jade
 block variables
   - var pagetitle = 'Services'
@@ -6,26 +14,25 @@ block variables
 
 block content
   
-    #main-content.text-center.container
-      h3(style='colo: #003F4E;') Services
-  
-      .row.text-center.main-text
-        .four.columns
-          img.services-logo.image-circle(src='img/services-pic.jpg')
-          h4(style='color: #003F4E;') Service 1
-          h6
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis scelerisque aliquet. Pellentesque id magna ac risus dignissim vulputate. Aenean quis elit leo. Cras ornare ante sed neque mollis, ut volutpat velit hendrerit. Pellentesque
- 
-        .four.columns
-          img.services-logo.image-circle(src='img/services-pic.jpg')
-          h4(style='color: #003F4E;') Service 2
-          h6
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis scelerisque aliquet. Pellentesque id magna ac risus dignissim vulputate. Aenean quis elit leo. Cras ornare ante sed neque mollis, ut volutpat velit hendrerit. Pellentesque
-  
-        .four.columns
-          img.services-logo.image-circle(src='img/services-pic.jpg')
-          h4(style='color: #003F4E;') Service 3
-          h6
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis scelerisque aliquet. Pellentesque id magna ac risus dignissim vulputate. Aenean quis elit leo. Cras ornare ante sed neque mollis, ut volutpat velit hendrerit. Pellentesque
+  #main-content.text-center.container
+    h3 Services
+    
+    #services
+      
+      +services(
+        'Service 1',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis scelerisque aliquet. Pellentesque id magna ac risus dignissim vulputate. Aenean quis elit leo. Cras ornare ante sed neque mollis, ut volutpat velit hendrerit. Pellentesque',
+        'services-pic.jpg')
 
-      button.book-btn Book Appointment
+      +services(
+        'Service 2',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis scelerisque aliquet. Pellentesque id magna ac risus dignissim vulputate. Aenean quis elit leo. Cras ornare ante sed neque mollis, ut volutpat velit hendrerit. Pellentesque',
+        'services-pic.jpg')
+        
+      +services(
+        'Service 3',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis scelerisque aliquet. Pellentesque id magna ac risus dignissim vulputate. Aenean quis elit leo. Cras ornare ante sed neque mollis, ut volutpat velit hendrerit. Pellentesque',
+        'services-pic.jpg')
+      
+
+    button.book-btn Book Appointment

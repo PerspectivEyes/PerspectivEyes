@@ -2,19 +2,19 @@
   "name": "-perspectiv-eyes",
   "description": "Perspective Family Eyecare website",
   "dependencies": {
-    "autoprefixer-stylus": "0.8.x",
-    "axis": "^0.5.2",
+    "autoprefixer-stylus": "0.9.x",
+    "axis": "^0.6.1",
     "coffee-script": "^1.0.0",
     "css-pipeline": "0.3.x",
-    "install": "^0.6.0",
-    "jade": "^1.0.0",
+    "install": "^0.8.1",
     "jeet": "^6.1.2",
     "js-pipeline": "0.2.x",
     "jstransformer-marked": "^1.0.0",
     "marked": "0.3.x",
-    "roots": "^4.0.1",
+    "pug": "^2.0.0-alpha8",
+    "roots": "^5.0.0",
     "roots-netlify": "^0.1.0",
     "rupture": "^0.6.1",
-    "stylus": "0.52.x"
+    "stylus": "0.54.5"
   }
 }

@@ -24,7 +24,6 @@ module.exports =
       headers:
         '/protected/path':
           'Cache-Control': 'max-age: 3000'
-          'Basic-Auth': 'username:password'
         '/*':
           'X-Frame-Options': 'DENY'
           'X-XSS-Protection': '1; mode=block'

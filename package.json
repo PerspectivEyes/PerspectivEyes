@@ -1,7 +1,9 @@
 {
-  "name": "-perspectiv-eyes",
-  "description": "Perspective Family Eyecare website",
-  "dependencies": {
+  "name": "package",
+  "version": "1.0.0",
+  "description": "perspective family eyecare - roots site",
+  "main": "index.js",
+    "dependencies": {
     "autoprefixer-stylus": "0.9.x",
     "axis": "^0.6.1",
     "coffee-script": "^1.0.0",
@@ -16,5 +18,19 @@
     "roots-netlify": "^0.1.0",
     "rupture": "^0.6.1",
     "stylus": "0.54.5"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "roots watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PerspectivEyes/PerspectivEyes.git"
+  },
+  "author": "perspective family eyecare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PerspectivEyes/PerspectivEyes/issues"
+  },
+  "homepage": "https://github.com/PerspectivEyes/PerspectivEyes#readme"
 }

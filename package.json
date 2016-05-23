@@ -14,7 +14,7 @@
     "jstransformer-marked": "^1.0.0",
     "marked": "0.3.x",
     "pug": "^2.0.0-alpha8",
-    "roots": "^5.0.0",
+    "roots": "^4.0.0",
     "roots-netlify": "^0.1.0",
     "rupture": "^0.6.1",
     "stylus": "0.54.5"

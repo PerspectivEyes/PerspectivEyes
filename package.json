@@ -9,12 +9,12 @@
     "coffee-script": "^1.0.0",
     "css-pipeline": "0.3.x",
     "install": "^0.8.1",
+    "jade": "1.11.0",
     "jeet": "^6.1.2",
     "js-pipeline": "0.2.x",
     "jstransformer-marked": "^1.0.0",
     "marked": "0.3.x",
-    "pug": "^2.0.0-alpha8",
-    "roots": "^4.0.0",
+    "roots": "^5.0.0",
     "roots-netlify": "^0.1.0",
     "rupture": "^0.6.1",
     "stylus": "0.54.5"
@@ -31,6 +31,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PerspectivEyes/PerspectivEyes/issues"
-  },
-  "homepage": "https://github.com/PerspectivEyes/PerspectivEyes#readme"
+  }
 }

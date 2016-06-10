@@ -3,6 +3,7 @@ base()
 
 @import '_settings'
 @import 'jeet'
+@import 'axis'
 @import url(https//fonts.googleapis.com/css?family=Montserrat400,700)
 
 html
@@ -18,7 +19,7 @@ body
   height 100px
   
 nav
-	 
+   
   ul
     list-style-type none
     text-align right
@@ -174,9 +175,9 @@ video
   display block
   
 /* Text & Content */
-#main-content 
-  margin-top 50px
-  padding 40px 0px
+#main-content
+  margin-top 20px
+  padding 20px 0px
 
 .main-text h6 
   padding 0px 5px
@@ -191,6 +192,22 @@ h3
   font-size 30px
   margin-bottom 65px
   color #003F4E
+  
+h5 
+  font-size 22px
+  margin-bottom 0px
+  color #003F4E
+  
+h6 
+  font-size 16px
+  margin 10px
+  color #003F4E
+
+.four-columns
+  column(1/4, gutter: .5)
+  
+  +below(1125px)
+    column(1/2, gutter: .5)
 
 .text
   &-center 
@@ -233,6 +250,7 @@ ul
   -webkit-padding-start 0px
 
 .book-btn 
+  hover-darken()
   width 120px
   height 120px
   margin 40px
@@ -270,7 +288,9 @@ ul
   border-radius 50%
   display inline
 
-.headshot 
+.headshot
+  hover-darken()
+  margin-top 30px
   width 200px
   height 200px
 
@@ -284,7 +304,8 @@ ul
     margin 0px 10px
 
 .social 
-  [class*="fa fa-"] 
+  [class*="fa fa-"]
+    hover-darken()
     background-color #00A3B4
     border-radius 30px
     color #FFFFFF
@@ -295,4 +316,3 @@ ul
     width 30px
     font-size 15px
     text-align center
-

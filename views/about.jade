@@ -8,7 +8,7 @@ mixin about_us(name, nickname, profession, image)
       h6!= profession
     br
 
-extends ./_layouts/layout.jade
+extends ./_layouts/one-page.jade
 
 block variables
   - var pagetitle= 'About Us'
@@ -24,58 +24,47 @@ block content
         +about_us('Mireya Piedra', 'mireya', 'Optometric Technician<br/>Frame Stylist', 'about-mireya.png')
         +about_us('Pauline Archer-Grant', 'partricia', 'Front Desk Manager<br/>Insurance Coordinator', 'about-pauline.png')
 
-      button.book-btn Book Appointment
-    
-    h3 Contact Us
-
-    .row
-      #contact.six.columns
-        input.field-width(placeholder='Name')      
-        br
-        input.field-width(placeholder='Email')     
-        br
-        textarea.field-width(placeholder='Message')
-        br
-
     button.book-btn Contact Us
 
-    .six.columns
-      img(style='width: 90%;', src='img/map.png')                
-      br
-      | 629 Eastern Pkwy               
-      br
-      | Unit M4, Ste 202, Brooklyn, NYC 11213               
-      br
-      br               
+    #location
+      #map.two-columns
+        img(style='width: 90%;', src='img/map.png')                
+        br
+        | 629 Eastern Pkwy               
+        br
+        | Unit M4, Ste 202, Brooklyn, NYC 11213               
+        br
+        br     
 
-      span(style='font-weight:bold; color: #003F4E;') Phone            
-        br
-        | (718) 708 - 5360
-        br
-        br
+      #contact.two-columns
+        span(style='font-weight:bold; color: #003F4E;') Phone            
+          br
+          | (718) 708 - 5360
+          br
+          br
 
-      span.days.text-left(style='font-weight: bold; color: #003F4E;')
-        span(style='color: #003F4E;') Hours            
-          br
-          | Monday: 
-          .time 10:00 AM - 6:00 PM         
-          br
-          | Tuesday:
-          .time 10:00 AM - 6:00 PM          
-          br
-          | Wednesday:
-          .time 10:00 AM - 6:00 PM                
-          br
-          | Thursday:
-          .time 10:00 AM - 7:00 PM 
-          br
-          | Friday:
-          .time 10:00 AM - 6:00 PM
-          br
-          | Saturday:
-          .time 10:00 AM - 6:00 PM
-          br
-          | Sunday:
-          .time Closed
+        span.days.text-left(style='font-weight: bold; color: #003F4E;')
+          span(style='color: #003F4E;') Hours            
+            br
+            | Monday: 
+            .time 10:00 AM - 6:00 PM         
+            br
+            | Tuesday:
+            .time 10:00 AM - 6:00 PM          
+            br
+            | Wednesday:
+            .time 10:00 AM - 6:00 PM                
+            br
+            | Thursday:
+            .time 10:00 AM - 7:00 PM 
+            br
+            | Friday:
+            .time 10:00 AM - 6:00 PM
+            br
+            | Saturday:
+            .time 10:00 AM - 6:00 PM
+            br
+            | Sunday:
+            .time Closed
 
 

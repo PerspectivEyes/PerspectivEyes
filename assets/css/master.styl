@@ -203,11 +203,29 @@ h6
   margin 10px
   color #003F4E
 
+.one-column
+  column(1)
+  
+.two-columns
+  column(1/2, gutter: .5)
+
+  +below(1125px)
+    column(1/2)
+    center()
+  
+.three-columns
+  column(1/3, gutter: .5)
+
+  +below(1125px)
+    column(1/2)
+    center()
+    
 .four-columns
   column(1/4, gutter: .5)
   
   +below(1125px)
-    column(1/2, gutter: .5)
+    column(1/2)
+    center()
 
 .text
   &-center 
@@ -249,7 +267,7 @@ ul
   -webkit-margin-end 0px
   -webkit-padding-start 0px
 
-.book-btn 
+.book-btn
   hover-darken()
   width 120px
   height 120px
@@ -287,13 +305,13 @@ ul
 .image-circle 
   border-radius 50%
   display inline
-
-.headshot
-  hover-darken()
-  margin-top 30px
   width 200px
   height 200px
 
+.headshot
+  margin-top 30px
+  width 200px
+  height 200px
 
 #footer 
   width 100%

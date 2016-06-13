@@ -4,23 +4,24 @@
 block variables
 
 case pagetitle
-    when "Perspective Family Eyecare"
-        //BANNER VIDEO
-        #banner-video
-          video.video(autoplay='', loop='', muted='')
-            source(src='img/banner/vid.webm', type='video/webm')
-       
-          #banner-text.text-right
-            h1
-              | Brooklyn&apos;s Premier
-              br
-              | Family Eyecare Center
-            
-            button.book-btn Book Appointment
-        // end of banner
+  when "Perspective Family Eyecare"
+      //BANNER VIDEO
+      #banner-video
+        video.video(autoplay='', loop='', muted='')
+          source(src='img/banner/vid.webm', type='video/webm')
+     
+        #banner-text.text-right
+          h1
+            | Brooklyn&apos;s Premier
+            br
+            | Family Eyecare Center
+          
+          button.book-btn Book Appointment
+      // end of banner
 
-    default
-        //BANNER IMAGE
-        #banner
-            img(src=banner_image)
-        // end of banner
+  default
+      //BANNER IMAGE
+      // set to variable name?
+      #banner
+          img(src=banner_image)
+      // end of banner

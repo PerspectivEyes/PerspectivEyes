@@ -4,7 +4,8 @@
 @import url(https//fonts.googleapis.com/css?family=Montserrat400,700)
 
 normalize-css()
-framework() 
+base()
+
 
 html
 body
@@ -20,12 +21,37 @@ body
   height 100px
   
 nav
-  nav: 2 #FFFFFF #003F4E true
-  width 70%
-  uppercase()   
+   
+  ul
+    list-style-type none
+    text-align right
+    margin-right 0px
+   
+    li
+      display inline-block
+      font-size 14px
+      color #00404E
+      font-weight 500
+      text-transform uppercase
+      padding 0px 0px 0px 20px
+      text-align right
       
+      a
+        text-decoration none
+        color inherit
+        
+        &:hover
+          border-top 2.5px dotted #00A3B2
+          border-bottom 2.5px dotted #00A3B2
+        
+  &.sticky
+    position fixed
+    width 70%
+    z-index 999
+
   &.main 
     height 60px
+    background-color #FFFFFF
     border 10px
     padding 20px (15% + 2px)
     display table
@@ -34,6 +60,9 @@ nav
   .slicknav_brand
     float left
     color transparent
+    font-size 18px
+    line-height 30px
+    padding 7px 12px
     height 44px
     
 .slicknav_item
@@ -195,7 +224,11 @@ video
     display table-cell
     text-align center
     vertical-align middle
-    
+
+    h1 
+      font-weight 500
+      font-size 36px
+
   &-container 
     position absolute
     top 50%
@@ -209,6 +242,13 @@ video
 .items 
   display table-cell
   vertical-align middle
+
+ul 
+  -webkit-margin-before 0em
+  -webkit-margin-after 0em
+  -webkit-margin-start 0px
+  -webkit-margin-end 0px
+  -webkit-padding-start 0px
 
 .book-btn
   hover-darken()
@@ -233,6 +273,9 @@ video
     font-weight 400
     color #FFFFFF
 
+#contact input 
+  padding 5px
+
 .services-logo 
   width 100%
   height 100%
@@ -254,15 +297,14 @@ video
   height 200px
 
 #footer 
-  debug()
   width 100%
   background-color #F4F4F4
-  padding 20px 0px
+  padding 35px 0px
 
   i 
     margin 0px 10px
 
-.social
+.social 
   [class*="fa fa-"]
     hover-darken()
     background-color #00A3B4
@@ -271,7 +313,7 @@ video
     display inline-block
     height 30px
     line-height 30px
-
+    margin auto 3px
     width 30px
     font-size 15px
     text-align center

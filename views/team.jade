@@ -1,0 +1,25 @@
+//- about.jade
+// About Us Mixin
+mixin about_us(name, nickname, profession, image)
+  .four-columns
+    .simple-modal(data-modal= nickname)
+      img.image-circle.headshot(src='img/'+image)
+      h5!= name
+      h6!= profession
+    br
+
+extends ./_layouts/one-page.jade
+
+block variables
+  - var pagetitle= 'Team'
+  - var banner_image= 'img/banner/about.jpg'
+
+block content
+  
+  #main-content.text-center.container
+    h3 Team
+      #team
+        +about_us('Dr. Benjamin Arthur', 'ben', 'Optometrist', 'about-ben.png')
+        +about_us('Daniel Vasquez', 'daniel', 'Optician', 'about-daniel.png')
+        +about_us('Mireya Piedra', 'mireya', 'Optometric Technician<br/>Frame Stylist', 'about-mireya.png')
+        +about_us('Pauline Archer-Grant', 'partricia', 'Front Desk Manager<br/>Insurance Coordinator', 'about-pauline.png')

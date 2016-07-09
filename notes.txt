@@ -1,0 +1,28 @@
+//NOTES FOR DEV
+
+* Nav
+	-button for Booking Appointments (fixed on right)
+		-teal color
+		-white text
+
+	-active mark on scroll
+
+* Hero Video 
+ 	- to cover
+
+* Container 
+	- padding 80 top / bottom between sections
+
+* About
+	- Two columns for copy
+
+* Services
+	- Icons bottom aligned
+
+* Testimonial
+	- Color Overlay
+	- Copy
+
+* Contact
+	- Left Aligned
+	

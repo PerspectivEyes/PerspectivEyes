@@ -1,3 +1,10 @@
+
+//- NAV.jade
+// Progress Mixin
+mixin nav_items(page, href)
+  li.main
+    a(href= href)= page
+
 //- layout.jade
 block variables
     - var pagetitle= 'Perspective Family Eyecare'
@@ -45,7 +52,4 @@ html(lang='en')
             });
         });
 
-
-
-
-    
+  body

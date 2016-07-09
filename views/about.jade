@@ -1,68 +1,15 @@
-//- about.jade
-// About Us Mixin
-mixin about_us(name, nickname, profession, image)
-  .four-columns
-    .simple-modal(data-modal= nickname)
-      img.image-circle.headshot(src='img/'+image)
-      h5!= name
-      h6!= profession
-    br
-
+//- index.jade
 extends ./_layouts/one-page.jade
 
-block variables
-  - var pagetitle= 'About Us'
-  - var banner_image= 'img/banner/about.jpg'
-
 block content
-  
+    
   #main-content.text-center.container
-    h3 About Us
-      #team
-        +about_us('Dr. Benjamin Arthur', 'ben', 'Optometrist', 'about-ben.png')
-        +about_us('Daniel Vasquez', 'daniel', 'Optician', 'about-daniel.png')
-        +about_us('Mireya Piedra', 'mireya', 'Optometric Technician<br/>Frame Stylist', 'about-mireya.png')
-        +about_us('Pauline Archer-Grant', 'partricia', 'Front Desk Manager<br/>Insurance Coordinator', 'about-pauline.png')
-
-    #location
-      #map.two-columns
-        img(style='width: 90%;', src='img/map.png')                
-        br
-        | 629 Eastern Pkwy               
-        br
-        | Unit M4, Ste 202, Brooklyn, NYC 11213               
-        br
-        br     
-
-      #contact.two-columns
-        span(style='font-weight:bold; color: #003F4E;') Phone            
-          br
-          | (718) 708 - 5360
-          br
-          br
-
-        span.days.text-left(style='font-weight: bold; color: #003F4E;')
-          span(style='color: #003F4E;') Hours            
-            br
-            | Monday: 
-            .time 10:00 AM - 6:00 PM         
-            br
-            | Tuesday:
-            .time 10:00 AM - 6:00 PM          
-            br
-            | Wednesday:
-            .time 10:00 AM - 6:00 PM                
-            br
-            | Thursday:
-            .time 10:00 AM - 7:00 PM 
-            br
-            | Friday:
-            .time 10:00 AM - 6:00 PM
-            br
-            | Saturday:
-            .time 10:00 AM - 6:00 PM
-            br
-            | Sunday:
-            .time Closed
-
-
+    #about
+      h3 About
+             
+    .video-container
+      iframe(width='560', height='315', src='https://www.youtube.com/embed/v34hR3bfkfo&volume=0&autoplay=0', frameborder='0', allowfullscreen='')
+             
+    .text-left
+      h6
+        |Perspective family Eyecare is a full service eyecare practice that exists to provide comprehensive vision and eye health examination for people of all ages. We have a fully furnished Optical and In-house laboratory to provide necessary and optional eyewear solutions that are both affordable and fashionable. We provide affordable eye health testing necessary for timely diagnoses and treatment of eye conditions. We take pride in our ability to communicate effectively and listen actively to each patient in order to provide customized individualized care for each patient. We demonstrate genuine care for each patient encounter thereby providing exccellent customer service. At Perspective we treat each patient with equal respect and care regardless of background or social status.

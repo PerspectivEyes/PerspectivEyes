@@ -17,7 +17,7 @@ body
 
 /* NAV */
 #nav_top_buffer
-  height 100px
+  height 80px
   
 nav
   nav: 2 #FFFFFF #003F4E true
@@ -25,7 +25,7 @@ nav
   uppercase()   
       
   &.main 
-    height 60px
+    height 40px
     border 10px
     padding 20px (15% + 2px)
     display table
@@ -52,7 +52,6 @@ nav
 .slicknav_btn
   margin 5px 5px 0px
   text-decoration none
-  text-shadow 0 1px 1px rgba(255,255,255,.75)
   border-radius 4px
   background-color #003F4E
   
@@ -149,8 +148,18 @@ video
   
 /* Text & Content */
 #main-content
+  h3
+    padding-top 80px
+    uppercase()
+    
+
+  center()
+  width 940px
   margin-top 20px
   padding 20px 0px
+  
+  +below(1125px)
+    width 340px
 
 .main-text h6 
   padding 0px 5px
@@ -233,9 +242,18 @@ video
     font-weight 400
     color #FFFFFF
 
-.services-logo 
-  width 100%
-  height 100%
+.service
+  .eye_
+    &logo
+      img
+        
+        width 165px
+    &test
+      img    
+        width 106px
+    &glasses      
+      img
+        width 138px    
 
 .time 
   margin-left 15px

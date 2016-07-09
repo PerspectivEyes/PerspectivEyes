@@ -1,12 +1,13 @@
 //- services.jade
 // Services Mixin
-mixin services(service, description, image)
+mixin services(service, description, image, imgclass)
     .three-columns
       .service
-        img.image-circle(src='img/'+image)
-        h5!= service
-        h6!= description
-      br
+        div(class=imgclass)
+          img(src='img/'+image)
+          h5!= service
+          h6!= description
+        br
 
 extends ./_layouts/one-page.jade
 block variables
@@ -20,17 +21,20 @@ block content
     
     #services
       
-      +services(
+        +services(
         'Eye Examinations',
         'Contact lens Examination',
-        'services-pic.jpg')
+        'services-eye_logo.png',
+        'eye_logo')
 
-      +services(
-        'Medical Eye Examinations',
-        'Lorem ipsum dolor sit amet',
-        'services-pic.jpg')
-        
-      +services(
-        'Optical',
-        'Lorem ipsum dolor sit amet',
-        'services-pic.jpg')
+        +services(
+          'Medical Eye Examinations',
+          'Lorem ipsum dolor sit amet',
+          'services-eye_test.png',
+          'eye_test')
+    
+        +services(
+          'Optical',
+          'Lorem ipsum dolor sit amet',
+          'services-eye_glasses.png',
+          'eye_glasses')

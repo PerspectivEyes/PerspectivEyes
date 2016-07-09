@@ -5,18 +5,17 @@ mixin nav_items(page, href)
   li
     a(href= href)= page
 
-
 nav.main
   img.slicknav_brand(src='img/PERSPECTIVE_LOGO_7_white.png')
   .slicknav_item.slicknav_row
     ul#menu
       // Nav Bar Items
-      +nav_items("Home", "/")
-      +nav_items("About Us", "#about")
-      +nav_items("Appointments", "#appointment")
+      +nav_items("About", "#about")
       +nav_items("Services", "#services")
-      +nav_items("Insurance", "#insurance")
-      +nav_items("Reviews", "#reviews")
+      +nav_items("Team", "#team")
+      +nav_items("Contact", "#contact")
+  .slicknav_btn BOOK NOW
+     
 
 // NAV BUFFER
 // Pushes Content Below NAV

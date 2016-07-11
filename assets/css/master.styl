@@ -14,16 +14,39 @@ headers()
 lists()
 text-selection()
 
+/* VARIABLES */
+$nav_height = 80px 
+$banner_height = 900px
+
+$white           = #ffffff
+$black           = #000000
+$primary_green   = #00A3B4
+$secondary_green = #003F4E
+$section_color_a = #ffffff
+$section_color_b = #f0f0f0
+
 html
 body
   width 100%
   height 100%
   font-family "Montserrat"
   font-weight 400
-
+    
+/* SECTION BACKGROUND COLORS*/
+#about
+  background-color $section_color_a
+  width 100%
+#services
+  background-color $section_color_b
+  width 100%
+#team
+  background-color $section_color_a
+  width 100%
+#contact
+  background-color $section_color_b
+  width 100%
+  
 /* NAV */
-$nav_height = 80px 
-
 #nav_top_buffer
   height $nav_height  
 
@@ -32,7 +55,7 @@ nav
   uppercase()
   width 100%
   height $nav_height
-  background-color #FFFFFF
+  background-color $white
   display block
   position fixed 
   z-index 999
@@ -64,63 +87,108 @@ nav
         
         a
           letter-spacing 1px
-          link: #00A3B4 'darken'
+          link: $primary_green 'darken'
         
       +below(1000px)
         display none
 
   .book_button
-      background-color #00A3B4
+      background-color $primary_green
       height 100%
       float right
       letter-spacing 1px
       width 18%
       text-decoration none
+      hover-darken()
         
       p
         margin 0px
         padding 0px 10px 
-        color #FFFFFF
+        color $white
         text-align center
         vertically-align()  
     
 /* Banner */
-#banner-video
-  position relative
+#banner_top_buffer
+  height $banner_height 
+
+.banner_video
+  position fixed
   box-sizing border-box
   overflow hidden
-  background-color #000000
+  background-color $black
   transform-style preserve-3d
   -webkit-transform-style preserve-3d
   -moz-transform-style preserve-3d
+  z-index -1
 
   video
+    display block
     width 130%
-    background-color #000000
+    background-color $black
 
-#banner
-  position relative
-  box-sizing border-box
-  overflow hidden
-  transform-style preserve-3d
-  -webkit-transform-style preserve-3d
-  -moz-transform-style preserve-3d
-  background-color #FFFFFF
-  height 518px
-    
-  img
-    width 100%
-    background-position center
-    background-size cover
-  
-#banner-text
+.banner_text
   position absolute
   top 60%
   right 5%
   -webkit-transform translateY(-73%)
   -ms-transform translateY(-73%)
   transform translateY(-73%)
-  color #FFFFFF
+  color $white
+
+.banner
+  position relative
+  box-sizing border-box
+  overflow hidden
+  transform-style preserve-3d
+  -webkit-transform-style preserve-3d
+  -moz-transform-style preserve-3d
+  background-color $white
+  height 518px
+    
+  img
+    width 100%
+    background-position center
+    background-size cover
+    
+/* Testimonials */
+#testimonials
+ height 518px
+ position relative
+ 
+.testimonials_text
+  position absolute
+  color $white
+  z-index 50
+  vertically-align()
+    
+  .quote
+    bold()
+    letter-spacing 2px
+    text-align center
+    font-size 40px
+  .signature
+    italic()
+    letter-spacing 1px
+    text-align center
+    font-size 20px
+
+.testimonials_background
+  background-color $primary_green
+  height 518px
+  position absolute
+  box-sizing border-box
+  overflow hidden
+  transform-style preserve-3d
+  -webkit-transform-style preserve-3d
+  -moz-transform-style preserve-3d
+  z-index 1
+    
+  img
+    width 100%
+    background-position center
+    background-size cover
+    mix-blend-mode soft-light
 
 /* Video */
 .video-container
@@ -141,24 +209,16 @@ nav
     bottom 0
     right 0
     margin auto
-
-iframe
-  max-width 95%
-
-video
-  display block
   
 /* Text & Content */
 #main-content
+  center()
+  width 940px
+  padding 20px 0px
+  
   h3
     padding-top 80px
     uppercase()
-    
-
-  center()
-  width 940px
-  margin-top 20px
-  padding 20px 0px
   
   +below(1125px)
     width 340px
@@ -214,7 +274,7 @@ video
     -webkit-transform translateY(-50%)
     -ms-transform translateY(-50%)
     transform translateY(-50%)
-    color #FFFFFF
+    color $white
 
 /* Other Styling */
 .items 
@@ -226,9 +286,9 @@ video
   width 120px
   height 120px
   margin 40px
-  background-color #00A3B4
+  background-color $primary_green
   border-radius 50%
-  color #FFFFFF
+  color $white
   text-align center
   padding 0px 0px
   font-size 16px
@@ -240,9 +300,9 @@ video
   border none
   box-sizing border-box
 
-    background-color #003F4E !important
+    background-color $primary_green !important
     font-weight 400
-    color #FFFFFF
+    color $white
 
 .service
   .eye_
@@ -276,7 +336,7 @@ video
 
 #footer 
   width 100%
-  background-color #F4F4F4
+  background-color $secondary_green
   padding 20px 0px
 
   i 
@@ -285,12 +345,21 @@ video
 .social
   [class*="fa fa-"]
     hover-darken()
-    background-color #00A3B4
+    background-color $primary_green
     border-radius 30px
-    color #FFFFFF
+    color $white
     display inline-block
     height 30px
     line-height 30px
     width 30px
     font-size 15px
     text-align center
+    
+#copyright
+  font-size .5 em
+  width 100%
+  color $white
+  background-color $primary_green
+  padding 5px 0px
+  text-align center
+  

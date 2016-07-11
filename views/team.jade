@@ -15,11 +15,15 @@ block variables
   - var banner_image= 'img/banner/about.jpg'
 
 block content
-  
-  #main-content.text-center.container
-    h3 Team
-      #team
-        +about_us('Dr. Benjamin Arthur', 'ben', 'Optometrist', 'about-ben.png')
-        +about_us('Daniel Vasquez', 'daniel', 'Optician', 'about-daniel.png')
-        +about_us('Mireya Piedra', 'mireya', 'Optometric Technician<br/>Frame Stylist', 'about-mireya.png')
-        +about_us('Pauline Archer-Grant', 'partricia', 'Front Desk Manager<br/>Insurance Coordinator', 'about-pauline.png')
+
+  #team 
+
+    #main-content.text-center.container
+
+      h3 Team
+
+        #team_list
+          +about_us('Dr. Benjamin Arthur', 'ben', 'Optometrist', 'about-ben.png')
+          +about_us('Daniel Vasquez', 'daniel', 'Optician', 'about-daniel.png')
+          +about_us('Mireya Piedra', 'mireya', 'Optometric Technician<br/>Frame Stylist', 'about-mireya.png')
+          +about_us('Pauline Archer-Grant', 'partricia', 'Front Desk Manager<br/>Insurance Coordinator', 'about-pauline.png')

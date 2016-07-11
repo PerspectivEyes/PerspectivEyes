@@ -16,25 +16,28 @@ block variables
 
 block content
 
-  #main-content.text-center.container
-    h3 Services
+  #services
     
-    #services
-      
-        +services(
-        'Eye Examinations',
-        'Contact lens Examination',
-        'services-eye_logo.png',
-        'eye_logo')
+    #main-content.text-center.container
 
-        +services(
-          'Medical Eye Examinations',
-          'Lorem ipsum dolor sit amet',
-          'services-eye_test.png',
-          'eye_test')
-    
-        +services(
-          'Optical',
-          'Lorem ipsum dolor sit amet',
-          'services-eye_glasses.png',
-          'eye_glasses')
+      h3 Services
+
+        #services_list
+
+          +services(
+          'Eye Examinations',
+          'Contact lens Examination',
+          'services-eye_logo.png',
+          'eye_logo')
+
+          +services(
+            'Medical Eye Examinations',
+            'Lorem ipsum dolor sit amet',
+            'services-eye_test.png',
+            'eye_test')
+      
+          +services(
+            'Optical',
+            'Lorem ipsum dolor sit amet',
+            'services-eye_glasses.png',
+            'eye_glasses')

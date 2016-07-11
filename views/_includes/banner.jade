@@ -6,35 +6,14 @@ block variables
 case pagetitle
   when "Perspective Family Eyecare"
       //BANNER VIDEO
-      #banner-video
+      .banner_video
         video.video(autoplay='', loop='', muted='')
           source(src='img/banner/vid.webm', type='video/webm')
      
-        #banner-text.text-right
+        .banner_text.text-right
           h1
             | Brooklyn&apos;s Premier
             br
             | Family Eyecare Center
           
-      // end of banner
-
-  when "Testimonials"
-      //BANNER
-      #banner
-        img(src=banner_image)
-     
-        #banner-pic-text.text-right
-          h1
-            | placeholder
-            br
-            | signature
-          
-      // end of banner
-
-
-  default
-      //BANNER IMAGE
-      // set to variable name?
-      // #banner
-      //    img(src=banner_image)
-      // end of banner
+      #banner_top_buffer

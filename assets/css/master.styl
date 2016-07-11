@@ -4,96 +4,98 @@
 @import url(https//fonts.googleapis.com/css?family=Montserrat400,700)
 
 normalize-css()
-framework() 
+base()
+forms()
+buttons()
+code-blocks()
+tables()
+bold-italic()
+headers()
+lists()
+text-selection()
 
 html
 body
-
   width 100%
   height 100%
-  background-color #FFFFFF
   font-family "Montserrat"
   font-weight 400
 
 /* NAV */
+$nav_height = 80px 
+
 #nav_top_buffer
-  height 80px
-  
+  height $nav_height  
+
 nav
-  nav: 2 #FFFFFF #003F4E true
-  width 70%
-  uppercase()   
-      
-  &.main 
-    height 40px
-    border 10px
-    padding 20px (15% + 2px)
-    display table
-    margin-bottom 1px
-  
-  .slicknav_brand
-    float left
-    color transparent
-    height 44px
-    
-.slicknav_item
-  display table-cell
-  vertical-align middle
-  
-  &.slicknav_row
-    padding 5px 0px 5px 10px
-    margin 2px 5px
-
-.slicknav_menu
-  display none
-  font-size 16px
-  background #FFFFFF
-    
-.slicknav_btn
-  margin 5px 5px 0px
-  text-decoration none
-  border-radius 4px
-  background-color #003F4E
-  
-  &:hover
-    background-color #00A3B4
-  
-.slicknav_nav 
-  
-  a
-    
-    &:hover
-      color #00A3B4
-      background #FFFFFF
-      border-top 0px
-      border-bottom 0px
-
-+below(1125px)
-
-  #menu
-    display none
-    
-  .slicknav_menu
+  group()
+  uppercase()
+  width 100%
+  height $nav_height
+  background-color #FFFFFF
+  display block
+  position fixed 
+  z-index 999
+   
+  img.slicknav_brand
     display block
-    background #FFFFFF
-    border 10px
-    padding px 15%
-    margin-bottom 1px
-    margin-right 1px
+    padding 0px
+    color transparent
+    float left
+    height 100%
+    margin-left 40px
+
+  .nav_list
+    width 80% 
+    height 60px
+    border 5px
+    padding 10px
+    float left
+    
+    ul
+      float right
+
+      li
+        text-margin()
+        list-style-type none
+        margin-right 30px
+        float left
+        text-align right
+        
+        a
+          letter-spacing 1px
+          link: #00A3B4 'darken'
+        
+      +below(1000px)
+        display none
+
+  .book_button
+      background-color #00A3B4
+      height 100%
+      float right
+      letter-spacing 1px
+      width 18%
+      text-decoration none
+        
+      p
+        margin 0px
+        padding 0px 10px 
+        color #FFFFFF
+        text-align center
+        vertically-align()  
     
 /* Banner */
 #banner-video
   position relative
   box-sizing border-box
   overflow hidden
-  background-color #FFFFFF
+  background-color #000000
   transform-style preserve-3d
   -webkit-transform-style preserve-3d
   -moz-transform-style preserve-3d
 
   video
-    width 100%
-    zoom 50%
+    width 130%
     background-color #000000
 
 #banner
@@ -113,8 +115,8 @@ nav
   
 #banner-text
   position absolute
-  top 73%
-  right 15%
+  top 60%
+  right 5%
   -webkit-transform translateY(-73%)
   -ms-transform translateY(-73%)
   transform translateY(-73%)
@@ -203,7 +205,7 @@ video
   &-vcenter 
     display table-cell
     text-align center
-    vertical-align middle
+    vertically-align()
     
   &-container 
     position absolute
@@ -217,7 +219,7 @@ video
 /* Other Styling */
 .items 
   display table-cell
-  vertical-align middle
+  vertically-align()
 
 .book-btn
   hover-darken()
@@ -246,11 +248,12 @@ video
   .eye_
     &logo
       img
-        
         width 165px
+        
     &test
       img    
         width 106px
+        
     &glasses      
       img
         width 138px    
@@ -272,7 +275,6 @@ video
   height 200px
 
 #footer 
-  debug()
   width 100%
   background-color #F4F4F4
   padding 20px 0px
@@ -289,7 +291,6 @@ video
     display inline-block
     height 30px
     line-height 30px
-
     width 30px
     font-size 15px
     text-align center

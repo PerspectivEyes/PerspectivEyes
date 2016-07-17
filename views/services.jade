@@ -2,11 +2,12 @@
 // Services Mixin
 mixin services(service, description, image, imgclass)
     .three-columns
-      .service
-        div(class=imgclass)
-          img(src='img/'+image)
-          h5!= service
-          h6!= description
+        .services_icons
+          div(class='services_'+imgclass).bottom_center
+            img(src='img/' + image)
+        .services_text
+          h5.bottom_center!= service
+            p= description
         br
 
 extends ./_layouts/one-page.jade
@@ -18,26 +19,26 @@ block content
 
   #services
     
-    #main-content.text-center.container
+    #main-content.text-center
 
       h3 Services
 
-        #services_list
+      .services_list
 
-          +services(
-          'Eye Examinations',
+        +services(
+          'Medical Eye Examinations',
           'Contact lens Examination',
           'services-eye_logo.png',
           'eye_logo')
 
-          +services(
-            'Medical Eye Examinations',
-            'Lorem ipsum dolor sit amet',
-            'services-eye_test.png',
-            'eye_test')
-      
-          +services(
-            'Optical',
-            'Lorem ipsum dolor sit amet',
-            'services-eye_glasses.png',
-            'eye_glasses')
+        +services(
+          'Comprehensive Eye Examinations',
+          'Lorem ipsum dolor sit amet',
+          'services-eye_test.png',
+          'eye_test')
+    
+        +services(
+          'Optical',
+          'Lorem ipsum dolor sit amet',
+          'services-eye_glasses.png',
+          'eye_glasses')

@@ -36,6 +36,7 @@ body
 #about
   background-color $section_color_a
   width 100%
+
 #services
   background-color $section_color_b
   width 100%
@@ -189,6 +190,11 @@ nav
     background-position center
     background-size cover
     mix-blend-mode soft-light
+    
+/* CONTACT */
+#contact
+  p
+    text-align left
 
 /* Video */
 .video-container
@@ -232,7 +238,7 @@ nav
   column(1)
   
 .two-columns
-  column(1/2, gutter: .5)
+  column(1/2, gutter: 5)
 
   +below(1125px)
     column(1/2)
@@ -251,6 +257,14 @@ nav
   +below(1125px)
     column(1/2)
     center()
+
+.two-col-text
+  -webkit-columns 2 200px
+  -moz-columns 2 200px
+  columns 2 200px
+  -moz-column-gap 20px
+  -webkit-column-gap 20px
+  text-align justify
 
 .text
   &-center 
@@ -304,20 +318,42 @@ nav
     font-weight 400
     color $white
 
-.service
-  .eye_
-    &logo
-      img
-        width 165px
+.bottom_center
+  position absolute
+  margin auto
+  left 0
+  right 0
+  bottom 0px
+  padding-bottom 10px
         
-    &test
-      img    
-        width 106px
-        
-    &glasses      
-      img
-        width 138px    
+.services_list
 
+  .services
+    &_icons
+      group()
+      position relative
+      height 150px
+            
+    &_eye_logo
+        img
+          width 165px
+      
+    &_eye_test
+        img    
+          width 106px
+          
+    &_eye_glasses      
+        img
+          width 138px  
+  
+    &_text
+      group()
+      position relative
+      height 120px
+      uppercase()
+      
+      p
+        p: 12px false
 .time 
   margin-left 15px
   display inline
@@ -333,6 +369,26 @@ nav
   margin-top 30px
   width 200px
   height 200px
+
+#contact_map
+  float left
+  
+  img
+    width 100% 
+
+  p
+    text-align center
+    p: 14px false
+  
+#contact_info
+  text-align left
+  
+  .label
+    bold()
+    p: 16px
+      
+    p
+      p: 14px false
 
 #footer 
   width 100%

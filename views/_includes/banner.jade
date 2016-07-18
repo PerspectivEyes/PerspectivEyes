@@ -7,9 +7,8 @@ case pagetitle
   when "Perspective Family Eyecare"
       //BANNER VIDEO
       .banner_video
-        video.video
-          source(src='img/banner/vid.webm', type='video/webm')
-          img(src='img/banner/homepage-banner.png')
+        video.video(autoplay='', loop='', muted='')
+          source(src='img/banner/vid.webm', type='video/webm', poster='img/homepage-banner.png')
      
         .banner_text.text-right
           h1

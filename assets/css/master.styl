@@ -40,9 +40,11 @@ body
 #services
   background-color $section_color_b
   width 100%
+  
 #team
   background-color $section_color_a
   width 100%
+  
 #contact
   background-color $section_color_b
   width 100%
@@ -76,6 +78,12 @@ nav
     padding 10px
     float left
     
+    +below(1000px)
+      width 60% 
+      height 60px
+      border 5px
+      padding 10px
+    
     ul
       float right
 
@@ -101,17 +109,31 @@ nav
       width 18%
       text-decoration none
       hover-darken()
+      display: table;
+      
+      .book_text
+        display table-cell
+        vertical-align middle
         
-      p
-        margin 0px
-        padding 0px 10px 
-        color $white
-        text-align center
-        vertically-align()  
+        p
+          margin 0px
+          padding 0px 10px 
+          color $white
+          text-align center
+          
+          +below(1000px)
+            p: 12px
+            
+          +below(700px)
+            p: 10px
     
 /* Banner */
 #banner_top_buffer
-  height $banner_height 
+  height $banner_height
+  +below(999px)
+    height 470px
+  +below(800px)
+    height 320px
 
 .banner_video
   position fixed
@@ -294,29 +316,6 @@ nav
 .items 
   display table-cell
   vertically-align()
-
-.book-btn
-  hover-darken()
-  width 120px
-  height 120px
-  margin 40px
-  background-color $primary_green
-  border-radius 50%
-  color $white
-  text-align center
-  padding 0px 0px
-  font-size 16px
-  font-weight 400
-  line-height normal
-  letter-spacing normal
-  text-transform none
-  white-space normal
-  border none
-  box-sizing border-box
-
-    background-color $primary_green !important
-    font-weight 400
-    color $white
 
 .bottom_center
   position absolute

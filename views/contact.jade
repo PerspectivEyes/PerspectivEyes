@@ -1,12 +1,11 @@
 //- about.jade
-// About Us Mixin
-mixin about_us(name, nickname, profession, image)
-  .four-columns
-    .simple-modal(data-modal= nickname)
-      img.image-circle.headshot(src='img/'+image)
-      h5!= name
-      h6!= profession
-    br
+// Schedule Mixin
+mixin schedule(day, hours)
+  tr
+    td
+      .day!= day
+    td
+      .hours!= hours
 
 extends ./_layouts/one-page.jade
 
@@ -18,28 +17,33 @@ block content
 
   #contact  
 
-    #main-content.text-center.container
+    #main-content.text-center
       
       h3 Contact
 
-        .contact_details
-          #contact_map.two-columns
-            img(src='img/map.png')                
-            p 629 Eastern Pkwy               
-            p Unit M4, Ste 202, Brooklyn, NYC 11213               
-            br 
+      .contact_details
+        #contact_map.two-columns
+          img(src='img/map.png')                
+          p 629 Eastern Pkwy 
+          p Unit M4, Ste 202, Brooklyn, NYC 11213 
+          br              
 
-          #contact_info.two-columns
-            .label Phone            
-              p (718) 708 - 5360
-              br
+        #contact_info.two-columns
+          .label Phone            
+            p (718) 708 - 5360
+            br
 
-            .label Hours            
-              p Monday: 10:00 AM - 6:00 PM 
-              p Tuesday: 10:00 AM - 6:00 PM
-              p Wednesday: 10:00 AM - 6:00 PM                
-              p Thursday: 10:00 AM - 7:00 PM 
-              p Friday: 10:00 AM - 6:00 PM
-              p Saturday: 10:00 AM - 6:00 PM
-              p Sunday: Closed
+          .sched
+            table
+              thead.label 
+                tr
+                  th Hours
+              tbody
+                +schedule('Mon', '10:00 am - 6:00 pm')
+                +schedule('Tue', '10:00 am - 6:00 pm')
+                +schedule('Wed', '10:00 am - 6:00 pm')
+                +schedule('Thu', '10:00 am - 7:00 pm')
+                +schedule('Fri', '10:00 am - 6:00 pm')
+                +schedule('Sat', '10:00 am - 5:00 pm')
+                +schedule('Sun', 'Closed')
 

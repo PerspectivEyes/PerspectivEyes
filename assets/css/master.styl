@@ -1,14 +1,13 @@
 @import 'jeet'
 @import 'axis'
 @import '_settings'
-@import url(https//fonts.googleapis.com/css?family=Montserrat400,700)
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 normalize-css()
 base()
 forms()
 buttons()
 code-blocks()
-tables()
 bold-italic()
 headers()
 lists()
@@ -17,6 +16,7 @@ text-selection()
 /* VARIABLES */
 $nav_height = 80px 
 $banner_height = 900px
+$testimonial_height = 500px
 
 $white           = #ffffff
 $black           = #000000
@@ -134,6 +134,10 @@ nav
     height 470px
   +below(800px)
     height 320px
+  +below(600px)
+    height 200px  
+  +below(400px)
+    height 150px
 
 .banner_video
   position fixed
@@ -158,6 +162,12 @@ nav
   -ms-transform translateY(-73%)
   transform translateY(-73%)
   color $white
+  
+  h1 
+    +below(700px)
+      font-size 30px
+    +below(500px)
+      font-size 20px
 
 .banner
   position relative
@@ -171,62 +181,22 @@ nav
     
   img
     width 100%
+    display block
+    background-color $primary_green
     background-position center
     background-size cover
     
-/* Testimonials */
-#testimonials
- height 518px
- position relative
- 
-.testimonials_text
-  position absolute
-  color $white
-  z-index 50
-  vertically-align()
-    
-  .quote
-    bold()
-    letter-spacing 2px
-    text-align center
-    font-size 40px
-  .signature
-    italic()
-    letter-spacing 1px
-    text-align center
-    font-size 20px
-
-.testimonials_background
-  background-color $primary_green
-  height 518px
-  position absolute
-  box-sizing border-box
-  overflow hidden
-  transform-style preserve-3d
-  -webkit-transform-style preserve-3d
-  -moz-transform-style preserve-3d
-  z-index 1
-    
-  img
-    width 100%
-    background-position center
-    background-size cover
-    mix-blend-mode soft-light
-    
-/* CONTACT */
-#contact
-  p
-    text-align left
-
-/* Video */
-.video-container
-  position relative
-  padding-bottom 56.25%
-  padding-top 35px
-  height 0
-  overflow hidden
-  margin-top 20px
-  margin-bottom 30px
+/* ABOUT */
+#about
+  
+  .video-container
+    position relative
+    padding-bottom 56.25%
+    padding-top 35px
+    height 0
+    overflow hidden
+    margin-top 20px
+    margin-bottom 30px
     
   iframe
     width 100%
@@ -237,28 +207,196 @@ nav
     bottom 0
     right 0
     margin auto
+
+
+/* SERVICES */
+#services
+
+  .services_list
+
+    .services
+      &_icons
+        group()
+        position relative
+        height 150px
+              
+      &_eye_logo
+          img
+            width 165px
+        
+      &_eye_test
+          img    
+            width 106px
+            
+      &_eye_glasses      
+          img
+            width 138px  
+    
+      &_text
+        group()
+        position relative
+        height 120px
+        uppercase()
+        
+        p
+          p: 12px false
+          
+/* TESTIMONIAL */
+#testimonials
+  height $testimonial_height
   
-/* Text & Content */
+  .testimonial
+    position relative
+    display block
+    
+    .testimonials_background
+      position absolute
+      width 100%
+      top 0
+      right 0
+      background-color $primary_green
+      box-sizing border-box
+      overflow hidden
+      background-size 100% auto
+      transform-style preserve-3d
+      -webkit-transform-style preserve-3d
+      -moz-transform-style preserve-3d
+          
+      img
+        height 100%
+        display block
+        background-position right bottom
+        background-size cover
+        mix-blend-mode soft-light
+
+    .testimonials_text
+      top $testimonial_height*.3
+      bottom 0
+      left 0
+      right 0
+      z-index 2
+      position absolute
+      color $white
+      
+      hr
+        width 25%
+        
+      .quote
+        bold()
+        letter-spacing 2px
+        text-align center
+        font-size 20px
+        
+      .signature
+        italic()
+        letter-spacing 1px
+        text-align center
+        font-size 15px
+
+/* TEAM */    
+#team
+  position relative
+  
+  .simple-modal
+    
+    .image-circle 
+      border-radius 50%
+      display inline
+      width 200px
+      height 200px
+    
+    .headshot
+      margin-top 30px
+      width 200px
+      height 200px
+
+/* CONTACT */
+#contact
+  position relative
+  z-index 1
+  p
+    text-align left
+    
+  #contact_map
+    float left
+
+    img
+      width 100% 
+
+    p
+      normal()
+      text-align left
+      p: 14px false
+      line-height 10px
+      reset-case()
+    
+  #contact_info
+    text-align left
+    
+    
+    .label
+      bold()
+      p: 16px
+      line-height 10px
+      
+      p
+        normal()
+        p: 14px false
+        line-height 20px
+        reset-case() 
+
+    th
+      p: 16px
+      height 35px  
+      
+    .day
+    .hours
+      height 20px
+                
+
+/* GLOBAL STYLES */
 #main-content
   center()
   width 940px
-  padding 20px 0px
+  padding 60px 0px
+  padding-bottom 60px
   
   h3
-    padding-top 80px
     uppercase()
   
   +below(1125px)
-    width 340px
+    width 800px
+  +below(999px)
+    width 750px
+  +below(800px)
+    width 650px
+  +below(600px)
+    width 500px  
+  +below(400px)
+    width 320px
+    
+.text
+  &-center 
+    text-align center
 
-.main-text h6 
-  padding 0px 5px
-  font-size 1.2em
-  margin-bottom 40px
+  &-right 
+    text-align right
 
-.one-column
-  column(1)
-  
+  &-vcenter 
+    display table-cell
+    text-align center
+    vertically-align()
+    
+  &-container 
+    position absolute
+    top 50%
+    left 15%
+    -webkit-transform translateY(-50%)
+    -ms-transform translateY(-50%)
+    transform translateY(-50%)
+    color $white
+
+  // Columns  
 .two-columns
   column(1/2, gutter: 5)
 
@@ -288,35 +426,6 @@ nav
   -webkit-column-gap 20px
   text-align justify
 
-.text
-  &-center 
-    text-align center
-
-  &-left 
-    text-align left
-
-  &-right 
-    text-align right
-
-  &-vcenter 
-    display table-cell
-    text-align center
-    vertically-align()
-    
-  &-container 
-    position absolute
-    top 50%
-    left 15%
-    -webkit-transform translateY(-50%)
-    -ms-transform translateY(-50%)
-    transform translateY(-50%)
-    color $white
-
-/* Other Styling */
-.items 
-  display table-cell
-  vertically-align()
-
 .bottom_center
   position absolute
   margin auto
@@ -324,71 +433,8 @@ nav
   right 0
   bottom 0px
   padding-bottom 10px
-        
-.services_list
 
-  .services
-    &_icons
-      group()
-      position relative
-      height 150px
-            
-    &_eye_logo
-        img
-          width 165px
-      
-    &_eye_test
-        img    
-          width 106px
-          
-    &_eye_glasses      
-        img
-          width 138px  
-  
-    &_text
-      group()
-      position relative
-      height 120px
-      uppercase()
-      
-      p
-        p: 12px false
-.time 
-  margin-left 15px
-  display inline
-  font-weight normal
-
-.image-circle 
-  border-radius 50%
-  display inline
-  width 200px
-  height 200px
-
-.headshot
-  margin-top 30px
-  width 200px
-  height 200px
-
-#contact_map
-  float left
-  
-  img
-    width 100% 
-
-  p
-    text-align center
-    p: 14px false
-  
-#contact_info
-  text-align left
-  
-  .label
-    bold()
-    p: 16px
-      
-    p
-      p: 14px false
-
+/* FOOTER */
 #footer 
   width 100%
   background-color $secondary_green
@@ -397,18 +443,18 @@ nav
   i 
     margin 0px 10px
 
-.social
-  [class*="fa fa-"]
-    hover-darken()
-    background-color $primary_green
-    border-radius 30px
-    color $white
-    display inline-block
-    height 30px
-    line-height 30px
-    width 30px
-    font-size 15px
-    text-align center
+  .social
+    [class*="fa fa-"]
+      hover-darken()
+      background-color $primary_green
+      border-radius 30px
+      color $white
+      display inline-block
+      height 30px
+      line-height 30px
+      width 30px
+      font-size 15px
+      text-align center
     
 #copyright
   font-size .5 em

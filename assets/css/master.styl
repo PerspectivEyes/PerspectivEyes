@@ -51,7 +51,17 @@ body
   
 /* NAV */
 #nav_top_buffer
-  height $nav_height  
+  height $nav_height 
+  
+  +below(999px)
+    height $nav_height*.8
+  +below(800px)
+    height $nav_height*.75
+  +below(600px)
+    height $nav_height*.6  
+  +below(400px)
+  +below(320px)
+    height $nav_height*.5
 
 nav
   group()
@@ -62,6 +72,16 @@ nav
   display block
   position fixed 
   z-index 999
+  
+  +below(999px)
+    height $nav_height*.8
+  +below(800px)
+    height $nav_height*.75
+  +below(600px)
+    height $nav_height*.6  
+  +below(400px)
+  +below(320px)
+    height $nav_height*.5
    
   img.slicknav_brand
     display block
@@ -70,6 +90,16 @@ nav
     float left
     height 100%
     margin-left 40px
+    
+    +below(999px)
+      height 80%
+    +below(800px)
+      height 75%
+    +below(600px)
+      height 60%  
+    +below(400px)
+    +below(320px)
+      height 50%
 
   .nav_list
     width 80% 
@@ -78,12 +108,31 @@ nav
     padding 10px
     float left
     
-    +below(1000px)
+    +below(999px)
       width 60% 
-      height 60px
+      height $nav_height*.75
       border 5px
       padding 10px
-    
+      
+    +below(800px)
+      width 55% 
+      height $nav_height*.70
+      border 5px
+      padding 10px
+      
+    +below(600px)
+      width 40% 
+      height $nav_height*.55
+      border 5px
+      padding 10px 
+      
+    +below(400px)
+    +below(320px)    
+      width 35% 
+      height $nav_height*.45
+      border 5px
+      padding 10px
+      
     ul
       float right
 
@@ -134,15 +183,20 @@ nav
           color $white
           text-align center
           
-          +below(1000px)
+          +below(999px)
             p: 12px
-            
-          +below(700px)
+          +below(800px)
+            p: 11px
+          +below(600px)
             p: 10px
+          +below(400px)
+          +below(320px)          
+            p: 8px
     
 /* Banner */
 #banner_top_buffer
   height $banner_height
+  
   +below(999px)
     height 470px
   +below(800px)
@@ -150,6 +204,7 @@ nav
   +below(600px)
     height 200px  
   +below(400px)
+  +below(320px)  
     height 150px
 
 .banner_video
@@ -180,10 +235,15 @@ nav
   color $white
   
   h1 
-    +below(700px)
-      font-size 30px
-    +below(500px)
-      font-size 20px
+    +below(999px)
+      p: 30px
+    +below(800px)
+      p: 25px
+    +below(600px)
+      p: 20px 
+    +below(400px)
+    +below(320px)    
+      p: 15px
 
 .banner
   position relative
@@ -371,6 +431,7 @@ nav
                 
 
 /* GLOBAL STYLES */
+//hide play button on iOS HTML5 Video
 *::-webkit-media-controls-start-playback-button
   display none !important
   -webkit-appearance none
@@ -381,9 +442,6 @@ nav
   padding 60px 0px
   padding-bottom 60px
   
-  h3
-    uppercase()
-  
   +below(1125px)
     width 800px
   +below(999px)
@@ -393,8 +451,22 @@ nav
   +below(600px)
     width 500px  
   +below(400px)
+  +below(320px)  
     width 320px
     
+  h3
+    uppercase()
+    
+    +below(999px)
+      p: 30px
+    +below(800px)
+      p: 25px
+    +below(600px)
+      p: 20px 
+    +below(400px)
+    +below(320px)    
+      p: 15px
+      
 .text
   &-center 
     text-align center
@@ -439,12 +511,22 @@ nav
     center()
 
 .two-col-text
-  -webkit-columns 2 200px
-  -moz-columns 2 200px
+  text-align justify
   columns 2 200px
   -moz-column-gap 20px
+  -moz-columns 2 200px
   -webkit-column-gap 20px
-  text-align justify
+  -webkit-columns 2 200px
+  
+  +below(999px)
+    p: 30px
+  +below(800px)
+    p: 25px
+  +below(600px)
+    p: 20px 
+  +below(400px)
+  +below(320px)  
+    p: 15px
 
 .bottom_center
   position absolute

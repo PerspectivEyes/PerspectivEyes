@@ -10,7 +10,7 @@
     "css-pipeline": "0.3.x",
     "install": "^0.8.1",
     "jade": "1.11.0",
-    "jeet": "^6.1.2",
+    "jeet": "6.1.2",
     "js-pipeline": "0.2.x",
     "jstransformer-marked": "^1.0.0",
     "marked": "0.3.x",

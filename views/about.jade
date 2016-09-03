@@ -8,7 +8,38 @@ block content
       h3 About
              
       .video-container
-        iframe(src='https://www.youtube.com/embed/v34hR3bfkfo&volume=0&autoplay=0', frameborder='0', allowfullscreen='')
-             
+        iframe#player(src='https://www.youtube.com/embed/v34hR3bfkfo', frameborder='0', allowfullscreen='')
+
+      script.
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // 3. This function creates an <iframe> (and YouTube player) after the API code downloads.
+        var player;
+        function onYouTubeIframeAPIReady() {
+          player = new YT.Player('player', {
+            height: '390',
+            width: '640',
+            videoId: 'v34hR3bfkfo',
+            playerVars: {
+              autoplay: 1,
+              loop: 1
+            }
+            events: {
+              'onReady': onPlayerReady
+            }
+          });
+         }
+
+        // 4. The API will call this function when the video player is ready.
+        function onPlayerReady(event) {
+          event.target.playVideo();
+          player.mute();
+        }
+
       .two-col-text
         |Perspective family Eyecare is a full service eyecare practice that exists to provide comprehensive vision and eye health examination for people of all ages. We have a fully furnished Optical and In-house laboratory to provide necessary and optional eyewear solutions that are both affordable and fashionable. We provide affordable eye health testing necessary for timely diagnoses and treatment of eye conditions. We take pride in our ability to communicate effectively and listen actively to each patient in order to provide customized individualized care for each patient. We demonstrate genuine care for each patient encounter thereby providing exccellent customer service. At Perspective we treat each patient with equal respect and care regardless of background or social status.
+
